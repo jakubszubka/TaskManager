@@ -24,5 +24,20 @@ namespace TaskManager.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(TodoTask task)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(task);  
+            }
+
+            _context.Tasks.Add(task);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
