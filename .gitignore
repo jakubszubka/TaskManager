@@ -14,3 +14,5 @@ obj/
 
 # SQLite database (optional if you want local DB only)
 tasks.db
+tasks.db-shm
+tasks.db-wal
