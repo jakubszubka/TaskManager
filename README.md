@@ -18,4 +18,23 @@ Simple CRUD web application for managing tasks.
 - Bootstrap
 
 ## How to run
+
+1. Clone the repository
+
+git clone https://github.com/yourname/task-manager.git
+
+2. Enter the folder
+
+cd task-manager
+
+3. Apply migrations
+
+dotnet ef database update
+
+4. Run the application
+
 dotnet run
+
+5. Open browser
+
+http://localhost:5215
